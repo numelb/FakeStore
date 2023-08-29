@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 export default function Layout() {
   return (
     <>
-      <nav>
+      <nav className="navbar-dark">
         <ul>
           <li>
             <NavLink to="/">Home</NavLink>

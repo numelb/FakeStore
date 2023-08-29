@@ -1,3 +1,5 @@
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import "./App.css";
@@ -14,7 +16,7 @@ import PageNotFound from "./pages/PageNotFound";
 function App() {
   return (
     <div>
-      <h1>RomanPizza</h1>
+      <Header />
       {/* <Menu /> */}
       <BrowserRouter>
         <Routes>
@@ -30,6 +32,9 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
