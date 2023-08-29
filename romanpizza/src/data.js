@@ -43,11 +43,8 @@ const pizzaData = [
   },
 ];
 
-const allPizzas = pizzaData.map(function allPizza(pizzas){
+const allPizzas = pizzaData.map(function allPizza(pizzas) {
+  return pizzas;
+});
 
-
-return pizzas
-
-})
-
-console.log(allPizzas)
+console.log(allPizzas);
