@@ -48,7 +48,18 @@ export default function ImageComponent() {
     <>
       <div>
         {pizzaData.map((pizza) => (
-          <img key={pizza.name} src={pizza.photoName} alt={pizza.alt} />
+          <>
+            <div>
+              <img key={pizza.name} src={pizza.photoName} alt={pizza.alt} />
+              <h4>
+                {pizza.name} -${pizza.price}
+              </h4>
+
+              <p>{pizza.ingredients}</p>
+
+              <button>Add to order</button>
+            </div>
+          </>
         ))}
       </div>
     </>
