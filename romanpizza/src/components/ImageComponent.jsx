@@ -1,61 +1,31 @@
-const pizzaData = [
-  {
-    name: "Focaccia",
-    ingredients: "Bread with italian olive oil and rosemary",
-    price: 6,
-    photoName: "src/assets/pizzas/focaccia.jpg",
-    soldOut: false,
-  },
-  {
-    name: "Pizza Margherita",
-    ingredients: "Tomato and mozarella",
-    price: 10,
-    photoName: "src/assets/pizzas/margherita.jpg",
-    soldOut: false,
-  },
-  {
-    name: "Pizza Spinaci",
-    ingredients: "Tomato, mozarella, spinach, and ricotta cheese",
-    price: 12,
-    photoName: "src/assets/pizzas/spinaci.jpg",
-    soldOut: false,
-  },
-  {
-    name: "Pizza Funghi",
-    ingredients: "Tomato, mozarella, mushrooms, and onion",
-    price: 12,
-    photoName: "src/assets/pizzas/funghi.jpg",
-    soldOut: false,
-  },
-  {
-    name: "Pizza Salamino",
-    ingredients: "Tomato, mozarella, and pepperoni",
-    price: 15,
-    photoName: "src/assets/pizzas/salamino.jpg",
-    soldOut: true,
-  },
-  {
-    name: "Pizza Prosciutto",
-    ingredients: "Tomato, mozarella, ham, aragula, and burrata cheese",
-    price: 18,
-    photoName: "src/assets/pizzas/prosciutto.jpg",
-    soldOut: false,
-  },
-];
-
+import { useEffect, useState } from "react";
+//import pizzaData from "../data";
 export default function ImageComponent() {
+  const [products, setProducts] = useState([]);
+  const URL = "https://fakestoreapi.com/products";
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  async function fetchProducts() {
+    const response = await fetch(URL);
+    const result = await response.json();
+
+    setProducts(result);
+  }
   return (
     <>
       <div>
-        {pizzaData.map((pizza) => (
+        {products.map((product) => (
           <>
             <div>
-              <img key={pizza.name} src={pizza.photoName} alt={pizza.alt} />
+              <img key={product.id} src={product.image} alt={product.title} />
               <h4>
-                {pizza.name} -${pizza.price}
+                {product.name} ${product.price}
               </h4>
 
-              <p>{pizza.ingredients}</p>
+              <h5>{product.description}</h5>
 
               <button>Add to order</button>
             </div>
