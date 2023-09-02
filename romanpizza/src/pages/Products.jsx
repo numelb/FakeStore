@@ -1,9 +1,9 @@
 import ImageComponent from "../components/ImageComponent";
 
-export default function Menu() {
+export default function Products() {
   return (
-    <div className="menu">
-      <h2>Menu</h2>
+    <div className="products">
+      <h2>Products</h2>
       <div>
         <ImageComponent />
       </div>

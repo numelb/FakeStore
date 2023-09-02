@@ -8,7 +8,7 @@ export default function Layout() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/menu">Menu</NavLink>
+            <NavLink to="/products">Products</NavLink>
           </li>
           <li>
             <NavLink to="/contact">Contact</NavLink>
