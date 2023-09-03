@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 //import pizzaData from "../data";
-export default function ImageComponent() {
+export default function AllProducts() {
   const [products, setProducts] = useState([]);
   const URL = "https://fakestoreapi.com/products";
 
@@ -25,7 +25,7 @@ export default function ImageComponent() {
                 {product.name} ${product.price}
               </h4>
 
-              <h5>{product.description}</h5>
+              {/* <h5>{product.description}</h5> */}
 
               <button>Add to order</button>
             </div>

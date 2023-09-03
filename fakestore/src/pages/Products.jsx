@@ -1,12 +1,12 @@
-import ImageComponent from "../components/ImageComponent";
-
+import React from "react";
+import AllProducts from "../components/AllProducts";
 export default function Products() {
   return (
-    <div className="products">
+    <>
       <h2>Products</h2>
       <div>
-        <ImageComponent />
+        <AllProducts />
       </div>
-    </div>
+    </>
   );
 }

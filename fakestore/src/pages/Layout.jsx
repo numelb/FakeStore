@@ -8,11 +8,12 @@ export default function Layout() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/products">Products</NavLink>
+            <NavLink to="/Products">Products</NavLink>
           </li>
           <li>
             <NavLink to="/contact">Contact</NavLink>
           </li>
+
           <li>
             <NavLink to="/about">About</NavLink>
           </li>

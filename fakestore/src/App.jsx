@@ -5,12 +5,14 @@ import "./App.css";
 //import Login from "./pages/Login";
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";
+
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import About from "./pages/about";
 import PageNotFound from "./pages/PageNotFound";
-import Products from "./pages/Products";
+import AllProducts from "./components/AllProducts";
+import About from "./pages/About";
+import SingleProduct from "./components/SingleProduct";
 //import Register from "./pages/Register";
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
 
-            <Route path="products" element={<Products />} />
+            <Route path="products" element={<AllProducts />} />
+
+            <Route path="products/id" element={<SingleProduct />} />
 
             <Route path="contact" element={<Contact />} />
 
