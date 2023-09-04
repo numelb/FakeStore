@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-//import pizzaData from "../data";
+import "../App.css";
 export default function AllProducts() {
   const [products, setProducts] = useState([]);
   const URL = "https://fakestoreapi.com/products";
@@ -16,22 +16,17 @@ export default function AllProducts() {
   }
   return (
     <>
-      <div>
-        {products.map((product) => (
-          <>
-            <div>
-              <img key={product.id} src={product.image} alt={product.title} />
-              <h4>
-                {product.name} ${product.price}
-              </h4>
-
-              {/* <h5>{product.description}</h5> */}
-
-              <button>Add to order</button>
+      {products.map((item) => (
+        <div className="container">
+          <div className="box">
+            <div className="content">
+              <h5>{item.title}</h5>
+              <p>{item.description}</p>
             </div>
-          </>
-        ))}
-      </div>
+            <img key={item.id} src={item.image} alt={item.title} />
+          </div>
+        </div>
+      ))}
     </>
   );
 }
