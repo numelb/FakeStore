@@ -29,9 +29,9 @@ export default function SingleProduct() {
                 src={singleProduct.image}
                 alt={singleProduct.title}
               />
-              <h4>
+              <h3>
                 {product.name} ${product.price}
-              </h4>
+              </h3>
               {/* <h5>{product.description}</h5> */}
               <button>Add to order</button>
             </div>
