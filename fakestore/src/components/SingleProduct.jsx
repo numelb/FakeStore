@@ -28,7 +28,7 @@ export default function SingleProduct() {
       <h3>
         {singleProduct.name} ${singleProduct.price}
       </h3>
-      {/* <h5>{product.description}</h5> */}
+      <h5>{singleProduct.description}</h5>
       <button>Add to order</button>
     </div>
   );
