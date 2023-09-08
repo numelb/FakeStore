@@ -6,6 +6,7 @@ export default function AllProducts() {
 
   useEffect(() => {
     fetchProducts();
+    console.log(products);
   }, []);
 
   async function fetchProducts() {

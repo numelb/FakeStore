@@ -1,43 +1,35 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import AllProducts from "./AllProducts";
 
 export default function SingleProduct() {
   const [singleProduct, setSingleProduct] = useState([]);
+  const { id } = useParams();
   const URL = `https://fakestoreapi.com/products/${id}`;
 
   useEffect(() => {
     SingleProduct();
   }, []);
 
-  async function SingleProduct(id) {
-    const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+  async function SingleProduct() {
+    const response = await fetch(URL);
     const result = await response.json();
-    console.log(result);
     setSingleProduct(result);
   }
 
   return (
-    <>
-      <div key={product.id}>
-        {singleProduct.map((product) => (
-          <>
-            <div>
-              if ({product.id === singleProduct.id})
-              <img
-                key={singleProduct.id}
-                src={singleProduct.image}
-                alt={singleProduct.title}
-              />
-              <h3>
-                {product.name} ${product.price}
-              </h3>
-              {/* <h5>{product.description}</h5> */}
-              <button>Add to order</button>
-            </div>
-          </>
-        ))}
-      </div>
-    </>
+    <div key={singleProduct.id}>
+      <img
+        key={singleProduct.id}
+        src={singleProduct.image}
+        alt={singleProduct.title}
+      />
+      <h3>
+        {singleProduct.name} ${singleProduct.price}
+      </h3>
+      {/* <h5>{product.description}</h5> */}
+      <button>Add to order</button>
+    </div>
   );
 }
