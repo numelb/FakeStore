@@ -22,7 +22,6 @@ export default function AllProducts() {
           <div className="box">
             <div className="content">
               <h5>{item.title}</h5>
-              <p>{item.description}</p>
             </div>
             <img key={item.id} src={item.image} alt={item.title} />
           </div>

@@ -1,12 +1,11 @@
 export default function Header() {
   return (
     <>
-      <div>
-        <header>Fake Store </header>
+      <div className="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Fake Store</h1>
+        </div>
       </div>
-      <div className="logo col-4">{/* <img src={logo} alt="" /> */}</div>
-
-      <h5>_______________________</h5>
     </>
   );
 }
