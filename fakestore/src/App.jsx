@@ -18,7 +18,6 @@ function App() {
   return (
     <div>
       <Header />
-      <button className="lowerright">SIGN IN</button>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>

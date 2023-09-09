@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import AllProducts from "./AllProducts";
-
+import "../App.css";
 export default function SingleProduct() {
   const [singleProduct, setSingleProduct] = useState([]);
   const { id } = useParams();
@@ -19,17 +19,21 @@ export default function SingleProduct() {
   }
 
   return (
-    <div key={singleProduct.id}>
-      <img
-        key={singleProduct.id}
-        src={singleProduct.image}
-        alt={singleProduct.title}
-      />
-      <h3>
-        {singleProduct.name} ${singleProduct.price}
-      </h3>
-      <h5>{singleProduct.description}</h5>
-      <button>Add to order</button>
+    <div className="container">
+      <div className="box">
+        <div key={singleProduct.id}>
+          <img
+            key={singleProduct.id}
+            src={singleProduct.image}
+            alt={singleProduct.title}
+          />
+          <h3>
+            {singleProduct.name} ${singleProduct.price}
+          </h3>
+          <p>{singleProduct.description}</p>
+          <button>Add to order</button>
+        </div>
+      </div>
     </div>
   );
 }

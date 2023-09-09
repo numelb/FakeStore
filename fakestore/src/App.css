@@ -1,16 +1,25 @@
 .container {
   display: flex;
   margin: 0 auto;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
   max-width: 1300px;
 }
 .box {
   width: 28%;
   margin: 10px;
   padding: 20px;
+  justify-content: flex-end;
 }
 img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.nav-item {
+  margin: 10px;
+  text-align: right;
 }
