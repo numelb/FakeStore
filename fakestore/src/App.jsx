@@ -13,11 +13,13 @@ import PageNotFound from "./pages/PageNotFound";
 import AllProducts from "./components/AllProducts";
 import About from "./pages/About";
 import SingleProduct from "./components/SingleProduct";
+import editProduct from "./components/editProduct";
 //import Register from "./pages/Register";
 function App() {
   return (
     <div>
       <Header />
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -30,6 +32,7 @@ function App() {
             <Route path="contact" element={<Contact />} />
 
             <Route path="about" element={<About />} />
+            <Route path="products/:id/edit" element={<editProduct />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
