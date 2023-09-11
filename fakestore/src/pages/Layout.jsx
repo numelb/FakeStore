@@ -3,7 +3,7 @@ import "../app.css";
 export default function Layout() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <ul className="navbar-nav">
           <li className="nav-item">
             <NavLink to="/">Home</NavLink>
@@ -19,6 +19,33 @@ export default function Layout() {
             <NavLink to="/about">About</NavLink>
           </li>
         </ul>
+        <form class="form-inline">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </form>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Search
+        </button>
+
+        <div>
+          <button type="submit" class="btn btn-outline-dark">
+            Sign in
+          </button>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-outline-dark">
+            Register
+          </button>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-outline-dark">
+            Cart(0)
+          </button>
+        </div>
       </nav>
       <Outlet />
     </>

@@ -19,17 +19,22 @@ export default function AllProducts() {
   return (
     <>
       {products.map((item) => (
-        <div className="container">
-          <div className="box">
-            <div className="content">
-              <h6>{item.title}</h6>
-            </div>
-            <img key={item.id} src={item.image} alt={item.title} />
+        <div className="container  ">
+          <div className="row col-12">
             <div>
-              <button>Edit</button>
-            </div>
-            <div>
-              <button>Add</button>
+              <div className="box">
+                <div className="content ">
+                  <h6>{item.title}</h6>
+                </div>
+                <div>
+                  <img key={item.id} src={item.image} alt={item.title} />
+                </div>
+
+                <div>
+                  <button class="btn btn-outline-dark">Edit</button>
+                  <button class="btn btn-outline-dark">Add</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

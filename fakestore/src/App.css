@@ -1,15 +1,13 @@
 .container {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-evenly;
   max-width: 1300px;
 }
 .box {
-  flex-direction: row;
   width: 28%;
   margin: 10px;
   padding: 20px;
+  justify-content: center;
 }
 img {
   width: 200px;
@@ -23,4 +21,11 @@ img {
 .nav-item {
   margin: 10px;
   text-align: right;
+}
+button {
+  margin: 10px;
+}
+row {
+  display: flex;
+  flex-wrap: wrap;
 }
