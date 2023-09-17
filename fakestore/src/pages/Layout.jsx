@@ -19,30 +19,30 @@ export default function Layout() {
             <NavLink to="/about">About</NavLink>
           </li>
         </ul>
-        <form class="form-inline">
+        <form className="form-inline">
           <input
-            class="form-control mr-sm-2"
+            className="form-control mr-sm-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
         </form>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
           Search
         </button>
 
         <div>
-          <button type="submit" class="btn btn-outline-dark">
-            Sign in
+          <button type="submit" className="btn btn-outline-dark">
+            <NavLink to="/login">Login</NavLink>
           </button>
         </div>
         <div>
-          <button type="submit" class="btn btn-outline-dark">
+          <button type="submit" className="btn btn-outline-dark">
             Register
           </button>
         </div>
         <div>
-          <button type="submit" class="btn btn-outline-dark">
+          <button type="submit" className="btn btn-outline-dark">
             Cart(0)
           </button>
         </div>

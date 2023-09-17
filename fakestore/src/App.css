@@ -1,17 +1,16 @@
 .container {
-  margin: 0 auto;
-  justify-content: space-evenly;
-  max-width: 1300px;
-}
-.box {
-  width: 28%;
-  margin: 10px;
-  padding: 20px;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1024px;
+  justify-content: space-around;
+  align-content: center;
 }
 img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+}
+button {
+  margin: 10px;
 }
 .nav {
   display: flex;
@@ -21,11 +20,4 @@ img {
 .nav-item {
   margin: 10px;
   text-align: right;
-}
-button {
-  margin: 10px;
-}
-row {
-  display: flex;
-  flex-wrap: wrap;
 }

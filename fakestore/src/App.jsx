@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
 //import Login from "./pages/Login";
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";
@@ -14,12 +13,13 @@ import AllProducts from "./components/AllProducts";
 import About from "./pages/About";
 import SingleProduct from "./components/SingleProduct";
 import editProduct from "./components/editProduct";
+import Login from "./pages/Login";
+
 //import Register from "./pages/Register";
 function App() {
   return (
     <div>
       <Header />
-
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -33,6 +33,7 @@ function App() {
 
             <Route path="about" element={<About />} />
             <Route path="products/:id/edit" element={<editProduct />} />
+            <Route path="login" element={<Login />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
