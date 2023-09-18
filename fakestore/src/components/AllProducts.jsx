@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default function AllProducts() {
   const [products, setProducts] = useState([]);
 
@@ -20,9 +22,17 @@ export default function AllProducts() {
     <div className="container">
       {products.map((item) => (
         <div key={item.id}>
-          <img src={item.image} alt={item.title} />s<p>{item.title}</p>
+          <img src={item.image} alt={item.title} />
           <div>
-            <button className="btn btn-outline-dark">Add</button>
+            <p className="productTitle">
+              {item.title} <h6>{`Category: ${item.category}`}</h6>
+              <Link
+                className="btn btn-outline-dark"
+                to={`/Products/${item.id}`}
+              >
+                Buy Now
+              </Link>
+            </p>
           </div>
         </div>
       ))}

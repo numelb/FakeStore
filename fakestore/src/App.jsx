@@ -4,15 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import Login from "./pages/Login";
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";
-
+import Product from "./components/Product";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import PageNotFound from "./pages/PageNotFound";
 import AllProducts from "./components/AllProducts";
 import About from "./pages/About";
-import SingleProduct from "./components/SingleProduct";
-import editProduct from "./components/editProduct";
 import Login from "./pages/Login";
 
 //import Register from "./pages/Register";
@@ -27,7 +25,7 @@ function App() {
 
             <Route path="products" element={<AllProducts />} />
 
-            <Route path="products/:id" element={<SingleProduct />} />
+            <Route path="products/:id" element={<Product />} />
 
             <Route path="contact" element={<Contact />} />
 
