@@ -17,7 +17,6 @@ button {
 .nav {
   display: flex;
   justify-content: space-around;
-  margin: 0 auto;
 }
 .nav-item {
   margin: 10px;
@@ -30,4 +29,25 @@ button {
   font-size: 20px;
   color: black;
   text-decoration: solid;
+}
+.display-1 {
+  text-align: center;
+}
+.navbar .nav {
+  align-content: center;
+}
+.footer {
+  width: 250px;
+  height: 250px;
+  margin: 40px auto;
+}
+.landingPage {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1024px;
+  width: 1000px;
+  height: 1000px;
+  justify-content: space-around;
+  align-content: center;
+  background-color: beige;
 }

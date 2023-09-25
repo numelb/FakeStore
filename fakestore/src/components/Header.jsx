@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <>
-      <div>Header</div>
+      <div className="display-1">Fake Store</div>
     </>
   );
 }

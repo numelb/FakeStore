@@ -12,6 +12,7 @@ import PageNotFound from "./pages/PageNotFound";
 import AllProducts from "./components/AllProducts";
 import About from "./pages/About";
 import Login from "./pages/Login";
+import Cart from "./components/Cart";
 
 //import Register from "./pages/Register";
 function App() {
@@ -29,6 +30,7 @@ function App() {
 
             <Route path="contact" element={<Contact />} />
 
+            <Route path="/cart" element={<Cart />} />
             <Route path="about" element={<About />} />
             <Route path="products/:id/edit" element={<editProduct />} />
             <Route path="login" element={<Login />} />

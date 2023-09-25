@@ -3,9 +3,9 @@ import "../app.css";
 export default function Layout() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <ul className="navbar-nav">
-          <li className="nav-item">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+        <ul className="navbar-nav ">
+          <li className="nav-item center">
             <NavLink to="/">Home</NavLink>
           </li>
           <li className="nav-item">
@@ -42,9 +42,9 @@ export default function Layout() {
           </button>
         </div>
         <div>
-          <button type="submit" className="btn btn-outline-dark">
+          <NavLink type="submit" className="btn btn-outline-dark">
             Cart(0)
-          </button>
+          </NavLink>
         </div>
       </nav>
       <Outlet />
