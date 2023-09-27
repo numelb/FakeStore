@@ -1,8 +1,10 @@
+import AllProducts from "../components/AllProducts";
+
 //import Login from "./Login";
 export default function Home() {
   return (
     <div className="landingPage">
-      <h2>Home</h2>
+      <AllProducts />
     </div>
   );
 }

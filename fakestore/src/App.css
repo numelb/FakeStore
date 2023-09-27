@@ -41,13 +41,15 @@ button {
   height: 250px;
   margin: 40px auto;
 }
-.landingPage {
+.login {
+  margin: 0 auto;
+  width: 80%;
   display: flex;
-  flex-wrap: wrap;
-  max-width: 1024px;
-  width: 1000px;
-  height: 1000px;
-  justify-content: space-around;
-  align-content: center;
-  background-color: beige;
+  justify-content: center;
+  align-items: center;
+  background-color: #86c2f3;
+  margin-top: 30px;
+  height: 60vh;
+  font-size: 20px;
+  font-weight: 700;
 }

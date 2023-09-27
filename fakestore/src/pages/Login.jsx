@@ -13,7 +13,7 @@ export default function Login() {
     <>
       <div className="login">
         <form className="topright" onSubmit={handleSubmit}>
-          <div class="form-group">
+          <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
               value={email}

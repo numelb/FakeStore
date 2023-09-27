@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 export default function AllProducts() {
   const [products, setProducts] = useState([]);
 
@@ -10,7 +9,7 @@ export default function AllProducts() {
   useEffect(() => {
     fetchProducts();
     console.log(products);
-  });
+  }, []);
 
   async function fetchProducts() {
     const response = await fetch(URL);
