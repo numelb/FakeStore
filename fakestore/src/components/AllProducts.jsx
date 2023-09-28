@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
 export default function AllProducts() {
   const [products, setProducts] = useState([]);
+
   const URL = "https://fakestoreapi.com/products";
 
   useEffect(() => {
@@ -16,17 +18,23 @@ export default function AllProducts() {
     setProducts(result);
   }
   return (
-    <>
+    <div className="container">
       {products.map((item) => (
-        <div className="container">
-          <div className="box">
-            <div className="content">
-              <h5>{item.title}</h5>
-            </div>
-            <img key={item.id} src={item.image} alt={item.title} />
+        <div key={item.id}>
+          <img src={item.image} alt={item.title} />
+          <div>
+            <p className="productTitle">
+              {item.title} <h6>{`Category: ${item.category}`}</h6>
+              <Link
+                className="btn btn-outline-dark"
+                to={`/Products/${item.id}`}
+              >
+                Buy Now
+              </Link>
+            </p>
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 }

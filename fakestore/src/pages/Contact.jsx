@@ -1,9 +1,15 @@
 export default function Contact() {
+  const currTime = new Date().toLocaleTimeString();
   return (
-    <div>
-      <h2>
-        <i className="bi bi-envelope-at-fill"></i>Contact
-      </h2>
+    <div className="footer">
+      <div>
+        <p>
+          <hr />
+          <strong>ADDRESS</strong>
+        </p>
+        <p>85300 Krista Lane Fort Worth, TX 76120 United States</p>
+        <p>Current Time is: {currTime}</p>
+      </div>
     </div>
   );
 }
