@@ -28,8 +28,8 @@ const Product = ({ cartItems, setCartItems }) => {
           <img
             src={product.image}
             alt={product.title}
-            height="400px"
-            width="400px"
+            height="50px"
+            width="50px"
           />
         </div>
         <div className="col-md-6">

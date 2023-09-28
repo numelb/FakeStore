@@ -53,3 +53,8 @@ button {
   font-size: 20px;
   font-weight: 700;
 }
+
+.cartItems {
+  display: flex;
+  flex-wrap: wrap;
+}
