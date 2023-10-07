@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-//import { products } from "./AllProducts";
-
-function removeFromCart(id) {
-  const newItems = [];
-  {
-    cartItems.map((item) => {
-      if (item.id === id) {
-        item.qty !== 1 && newItems.push({ ...item, qty: item.qty - 1 });
-      } else {
-        newItems.push(item);
-      }
-    });
+/* eslint-disable react/prop-types */
+export default function Cart({ cartItems, setCartItems }) {
+  function removeFromCart(item) {
+    // removes all items with same id
+    const updatedItems = cartItems.filter(({ id }) => id !== item.id);
+    setCartItems(updatedItems);
+    // const newItems = [];
+    // //{
+    // cartItems.map((id) => {
+    //   if (item.id === id) {
+    //     item.qty !== 1 && newItems.push({ ...item, qty: item.qty - 1 });
+    //   } else {
+    //     setCartItems(newItems.push(item));
+    //   }
+    // });
   }
-}
 
-export default function Cart({ cartItems }) {
   return (
     <div className="cartItems">
       {cartItems &&
