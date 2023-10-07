@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import "../App.css";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 export default function AllProducts() {
   const [products, setProducts] = useState([]);
+  const [searchParams] = useSearchParams();
 
   const URL = "https://fakestoreapi.com/products";
 
   useEffect(() => {
     fetchProducts();
-    console.log(products);
   }, []);
 
   async function fetchProducts() {
@@ -17,9 +17,14 @@ export default function AllProducts() {
 
     setProducts(result);
   }
+
+  const filterParam = searchParams.get("filter");
+  const filteredProducts = products.filter(({ category }) => {
+    return category === filterParam || !filterParam;
+  });
   return (
     <div className="container">
-      {products.map((item) => (
+      {filteredProducts.map((item) => (
         <div key={item.id}>
           <img src={item.image} alt={item.title} />
           <div>

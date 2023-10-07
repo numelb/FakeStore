@@ -26,19 +26,20 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-
             <Route path="products" element={<AllProducts />} />
-
             <Route
               path="products/:id"
               element={
                 <Product cartItems={cartItems} setCartItems={setCartItems} />
               }
             />
-
             <Route path="contact" element={<Contact />} />
-
-            <Route path="/cart" element={<Cart cartItems={cartItems} />} />
+            <Route
+              path="/cart"
+              element={
+                <Cart cartItems={cartItems} setCartItems={setCartItems} />
+              }
+            />
             <Route path="about" element={<About />} />
             <Route path="products/:id/edit" element={<editProduct />} />
             <Route path="login" element={<Login />} />

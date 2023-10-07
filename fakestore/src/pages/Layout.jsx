@@ -1,6 +1,8 @@
 import { NavLink, Outlet } from "react-router-dom";
 import "../app.css";
 export default function Layout() {
+  const handleMenSort = () => {};
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light ">
@@ -28,9 +30,17 @@ export default function Layout() {
           />
         </form>
         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Search
+          <NavLink to="/Products/?filter=men's clothing">Men</NavLink>
         </button>
-
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <NavLink to="/Products/?filter=women's clothing">Women</NavLink>
+        </button>
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <NavLink to="/Products/?filter=jewelery">Jewelry</NavLink>
+        </button>
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <NavLink to="/Products/?filter=electronics">Electronics</NavLink>
+        </button>
         <div>
           <button type="submit" className="btn btn-outline-dark">
             <NavLink to="/login">Login</NavLink>
@@ -42,7 +52,7 @@ export default function Layout() {
           </button>
         </div>
         <div>
-          <NavLink type="submit" className="btn btn-outline-dark">
+          <NavLink to="/cart" type="submit" className="btn btn-outline-dark">
             Cart(0)
           </NavLink>
         </div>

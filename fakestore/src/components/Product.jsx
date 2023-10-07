@@ -45,7 +45,7 @@ const Product = ({ cartItems, setCartItems }) => {
             className="btn btn-outline-dark"
             onClick={() => addToCart(product)}
           >
-            Add to Cart
+            +
           </button>
 
           <NavLink to="/cart" className="btn btn-dark">
