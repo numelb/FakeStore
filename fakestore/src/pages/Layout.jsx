@@ -36,7 +36,7 @@ export default function Layout() {
           <NavLink to="/Products/?filter=women's clothing">Women</NavLink>
         </button>
         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-          <NavLink to="/Products/?filter=jewelery">Jewelery</NavLink>
+          <NavLink to="/Products/?filter=jewelery">Jewelry</NavLink>
         </button>
         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
           <NavLink to="/Products/?filter=electronics">Electronics</NavLink>
