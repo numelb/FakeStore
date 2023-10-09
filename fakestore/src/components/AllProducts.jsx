@@ -31,10 +31,10 @@ export default function AllProducts() {
             <p className="productTitle">
               {item.title} <h6>{`Category: ${item.category}`}</h6>
               <Link
-                className="btn btn-outline-dark"
+                className="btn btn-outline-dark buynow"
                 to={`/Products/${item.id}`}
               >
-                Buy Now
+                More Details
               </Link>
             </p>
           </div>
