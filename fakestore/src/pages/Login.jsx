@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AllProducts from "../components/AllProducts";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -34,7 +35,7 @@ export default function Login() {
             />
           </div>
 
-          <button> LOGIN</button>
+          <button onClick={<AllProducts />}> LOGIN</button>
         </form>
       </div>
     </>

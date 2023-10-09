@@ -30,6 +30,18 @@ export default function Cart({ cartItems, setCartItems }) {
             </div>
           </div>
         ))}
+      <div>
+        <button
+          onClick={() =>
+            alert(
+              "Login to your account to checkout. No user account? click Register"
+            )
+          }
+          className="btn btn-dark"
+        >
+          CheckOut
+        </button>
+      </div>
     </div>
   );
 }

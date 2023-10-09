@@ -42,7 +42,7 @@ export default function Layout() {
           <NavLink to="/Products/?filter=electronics">Electronics</NavLink>
         </button>
         <div>
-          <button type="submit" className="btn btn-outline-dark">
+          <button type="submit" className="btn btn-outline-dark ">
             <NavLink to="/login">Login</NavLink>
           </button>
         </div>
