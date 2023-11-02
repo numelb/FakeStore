@@ -1,19 +1,8 @@
-/* eslint-disable react/prop-types */
-export default function Cart({ cartItems, setCartItems }) {
-  function removeFromCart(item) {
-    // removes all items with same id
-    const updatedItems = cartItems.filter(({ id }) => id !== item.id);
-    setCartItems(updatedItems);
-    // const newItems = [];
-    // //{
-    // cartItems.map((id) => {
-    //   if (item.id === id) {
-    //     item.qty !== 1 && newItems.push({ ...item, qty: item.qty - 1 });
-    //   } else {
-    //     setCartItems(newItems.push(item));
-    //   }
-    // });
-  }
+import { useContext } from "react";
+import { CartContext } from "../context/cart";
+export default function Cart() {
+  const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal } =
+    useContext(CartContext);
 
   return (
     <div className="cartItems">
@@ -25,12 +14,25 @@ export default function Cart({ cartItems, setCartItems }) {
               <p className="productTitle">
                 {item.title} <h6>{`Category: ${item.category}`}</h6>$
                 {item.price}
-                <button onClick={() => removeFromCart(item)}>Remove</button>
+                <button onClick={() => removeFromCart(item)}>-</button>
+                <button onClick={() => addToCart(item)}>+</button>
               </p>
             </div>
           </div>
         ))}
       <div>
+        <div>
+          cartItems.length > 0 ? (<h1> Total: ${getCartTotal()}</h1>
+          <button
+            onClick={() => {
+              clearCart();
+            }}
+          >
+            Clear cart
+          </button>
+          )
+        </div>
+
         <button
           onClick={() =>
             alert(

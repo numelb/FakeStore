@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { CartContext } from "../context/cart";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
-const Product = ({ cartItems, setCartItems }) => {
+const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   const URL = `https://fakestoreapi.com/products/${id}`;
+  const { cartItems, addToCart } = useContext(CartContext);
 
   useEffect(() => {
     fetchProduct();
@@ -16,10 +18,10 @@ const Product = ({ cartItems, setCartItems }) => {
     setProduct(result);
   }
 
-  const addToCart = (product) => {
-    setCartItems([...cartItems, product]);
-    console.log(cartItems);
-  };
+  // const addToCart = (product) => {
+  //   setCartItems([...cartItems, product]);
+  //   console.log(cartItems);
+  // };
 
   return (
     <>
