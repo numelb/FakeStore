@@ -1,13 +1,36 @@
 import { useState } from "react";
-import AllProducts from "../components/AllProducts";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email);
+
+    try {
+      const response = await fetch(
+        `https://strangers-things.herokuapp.com/api/2302-ACC-PT-WEB-PT-C/users/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            user: {
+              username: email,
+              password: password,
+            },
+          }),
+        }
+      );
+      const result = await response.json();
+
+      if (result.success) {
+        alert("Welcome back");
+      }
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -20,6 +43,9 @@ export default function Login() {
               value={email}
               type="email"
               name="email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
               placeholder="type email here"
               id="email"
             />
@@ -30,12 +56,15 @@ export default function Login() {
               value={password}
               type="password"
               name="password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
               placeholder="type password here"
               id="password"
             />
           </div>
 
-          <button onClick={<AllProducts />}> LOGIN</button>
+          <button type="submit"> LOGIN</button>
         </form>
       </div>
     </>

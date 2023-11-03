@@ -1,9 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-//import Login from "./pages/Login";
-// import Header from "./components/Header";
-// import Footer from "./components/Footer";
 import Product from "./components/Product";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
@@ -12,10 +9,10 @@ import PageNotFound from "./pages/PageNotFound";
 import AllProducts from "./components/AllProducts";
 import About from "./pages/About";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Cart from "./components/Cart";
 import { useState } from "react";
 
-//import Register from "./pages/Register";
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -43,6 +40,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="products/:id/edit" element={<editProduct />} />
             <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>

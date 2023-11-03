@@ -7,7 +7,7 @@ const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   const URL = `https://fakestoreapi.com/products/${id}`;
-  const { cartItems, addToCart } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     fetchProduct();
@@ -17,11 +17,6 @@ const Product = () => {
     const result = await response.json();
     setProduct(result);
   }
-
-  // const addToCart = (product) => {
-  //   setCartItems([...cartItems, product]);
-  //   console.log(cartItems);
-  // };
 
   return (
     <>

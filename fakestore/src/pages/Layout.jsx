@@ -1,7 +1,9 @@
 import { NavLink, Outlet } from "react-router-dom";
 import "../app.css";
+import { useContext } from "react";
+import { CartContext } from "../context/cart";
 export default function Layout() {
-  const handleMenSort = () => {};
+  const { cartItems } = useContext(CartContext);
 
   return (
     <>
@@ -48,12 +50,12 @@ export default function Layout() {
         </div>
         <div>
           <button type="submit" className="btn btn-outline-dark">
-            Register
+            <NavLink to="/register">Register</NavLink>
           </button>
         </div>
         <div>
           <NavLink to="/cart" type="submit" className="btn btn-outline-dark">
-            Cart(0)
+            Cart({cartItems.length})
           </NavLink>
         </div>
       </nav>
